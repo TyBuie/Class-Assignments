@@ -1,0 +1,47 @@
+/* 
+
+Instructions
+(Vowel or consonant?) 
+
+Write a program that prompts the user to enter a letter and check whether the letter is a vowel or consonant. 
+
+For a nonletter input, display invalid input.
+
+
+Instructor notes
+1.) Retrieve the character from the user
+2.) If the character is a non-letter, then invalid input message
+3.) If the character is a letter, then determine if it is a vowel
+4.) Vowels matches a,e,i,o,u,A,E,I,O,U
+5.) If the letter is not a vowel then it is a consonant
+
+*/
+import java.util.Scanner;
+import java.lang;
+
+public class Exercise04_13{
+public static void main (String [] args){
+
+    Scanner input = new Scanner (System.in);
+
+
+    System.out.print("Enter a letter: ");
+    String s = input.nextLine();
+    char ch = s.charAt(0);
+
+    if (Character.isLetter(ch))
+    {
+        switch(Character.toUpperCase(ch))
+        {
+            case 'A': 
+            case 'E': 
+            case 'I': 
+            case '0': 
+            case 'U': System.out.println(ch + " is a vowel"); break;
+            default : System.out.println(ch + " is a consonant"); 
+        }
+    }
+    else
+        System.out.println(ch + " is an invalid input");
+}
+}
