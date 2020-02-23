@@ -1,0 +1,36 @@
+*
+ * Write a method isSubString which checks if one word is a substring of another. Given two
+ * strings, S1 and S2, write code to check if S2 is a reverse string of S1 using only one call to isSubString
+ * (i.e., "aihsent" is a reversal of" tyneshia").
+ */
+public class ReverseString {
+    public static void main(String[] args) {
+        String s1 = "tyneshia";
+        String s2 = "aihsenyt";
+
+    public isReverseString(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        return isReverseString(s1, s2);
+    }
+
+    /**
+     * Use boolean to check if string is reversed
+     *
+     * s1 is the first string
+     * s2 is the second string
+     * boolean is TRUE if s1 is a substring of s2, else FALSE
+     */
+    public static boolean isSubString(String s1, String s2) {
+        return s2.contains(s1);
+    }
+
+    
+        System.out.println(isReverseString("tyneshia", "aihsenyt")); // true
+        System.out.println(isReverseString("georgiastateuniversity", "ytisrevinuetatsaigroeg")); // true
+        System.out.println(isReverseString("tyneshia", "tyneshia")); // false
+        System.out.println(isReverseString("tyneshia", "aihseny")); // false
+        System.out.println(isReverseString("", "")); // true
+    }
+}
