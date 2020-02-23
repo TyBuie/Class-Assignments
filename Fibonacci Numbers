@@ -1,0 +1,29 @@
+
+import java.util.*; 
+
+public class FibonacciNumbers {
+    public static void main(String[] args) {
+
+    //Computes fibonacci numbers 
+    
+     
+    public static int[] getFirstKFibonacciNumbers(int k) {
+        int[] fib = new int[k];
+        int i = 1;
+        while (i < k) {
+            if (i == 1 || i == 2) {
+                fib[i] = 1;
+            } else {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            i++;
+        }
+        return fib;
+    }
+
+    
+       System.out.println(Arrays.toString(getFirstKFibonacciNumbers(0)));
+        System.out.println(Arrays.toString(getFirstKFibonacciNumbers(10)));
+        System.out.println(Arrays.toString(getFirstKFibonacciNumbers(46)));
+    }
+}
